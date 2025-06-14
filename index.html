@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction à Jakarta EE - Cours Interactif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="header-text">
+                        <h1>Introduction à Jakarta EE</h1>
+                        <p>Cours interactif pour Licence 3 - Génie Logiciel</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="professor-info">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <p class="professor-name">Prof. Mbaye Sokhna THIAM</p>
+                            <p class="school">Groupe ISI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="course-layout">
+                <!-- Navigation Sidebar -->
+                <nav class="sidebar">
+                    <div class="nav-card">
+                        <h3>Sommaire du cours</h3>
+                        <div class="nav-items">
+                            <button class="nav-item active" data-section="introduction">
+                                <span class="nav-number">1</span>
+                                <i class="fas fa-book-open"></i>
+                                <span>Introduction</span>
+                            </button>
+                            <button class="nav-item" data-section="history">
+                                <span class="nav-number">2</span>
+                                <i class="fas fa-history"></i>
+                                <span>Historique</span>
+                            </button>
+                            <button class="nav-item" data-section="prerequisites">
+                                <span class="nav-number">3</span>
+                                <i class="fas fa-users"></i>
+                                <span>Prérequis</span>
+                            </button>
+                            <button class="nav-item" data-section="architecture">
+                                <span class="nav-number">4</span>
+                                <i class="fas fa-sitemap"></i>
+                                <span>Architecture</span>
+                            </button>
+                            <button class="nav-item" data-section="features">
+                                <span class="nav-number">5</span>
+                                <i class="fas fa-cogs"></i>
+                                <span>Fonctionnalités</span>
+                            </button>
+                            <button class="nav-item" data-section="comparison">
+                                <span class="nav-number">6</span>
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Comparaison</span>
+                            </button>
+                            <button class="nav-item" data-section="examples">
+                                <span class="nav-number">7</span>
+                                <i class="fas fa-code"></i>
+                                <span>Exemples</span>
+                            </button>
+                            <button class="nav-item" data-section="conclusion">
+                                <span class="nav-number">8</span>
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Conclusion</span>
+                            </button>
+                            <button class="nav-item" data-section="annexes">
+                                <span class="nav-number">9</span>
+                                <i class="fas fa-paperclip"></i>
+                                <span>Annexes</span>
+                            </button>
+                        </div>
+                        <div class="course-info">
+                            <p><strong>Durée estimée</strong></p>
+                            <p>4-6 heures</p>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Main Content -->
+                <main class="content">
+                    <div class="content-card">
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="section active">
+                            <div class="section-header">
+                                <h2>Introduction générale</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="intro-highlight">
+                                <h3><i class="fas fa-book-open"></i> Qu'est-ce que Jakarta EE ?</h3>
+                                <div class="highlight-content">
+                                    <p><strong>Jakarta EE (Jakarta Enterprise Edition)</strong> est une plateforme de développement d'applications d'entreprise basée sur Java. Elle fournit un ensemble complet de spécifications, d'APIs et de services pour créer des applications robustes, sécurisées et scalables.</p>
+                                </div>
+                            </div>
+
+                            <div class="two-column">
+                                <div class="info-card">
+                                    <h4><i class="fas fa-target"></i> Objectif principal</h4>
+                                    <p>Simplifier le développement d'applications d'entreprise en fournissant des APIs standardisées et des services intégrés.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4><i class="fas fa-building"></i> Usage typique</h4>
+                                    <p>Applications web complexes, services web RESTful, systèmes de gestion d'entreprise, microservices.</p>
+                                </div>
+                            </div>
+
+                            <div class="objectives-section">
+                                <h3><i class="fas fa-bullseye"></i> Objectifs pédagogiques du cours</h3>
+                                <div class="objectives-list">
+                                    <div class="objective-item">
+                                        <div class="objective-icon">
+                                            <i class="fas fa-code"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Maîtriser les concepts fondamentaux</h4>
+                                            <p>Comprendre l'architecture et les composants de Jakarta EE</p>
+                                        </div>
+                                    </div>
+                                    <div class="objective-item">
+                                        <div class="objective-icon">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Développer des applications pratiques</h4>
+                                            <p>Créer des projets concrets utilisant les APIs Jakarta EE</p>
+                                        </div>
+                                    </div>
+                                    <div class="objective-item">
+                                        <div class="objective-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Acquérir une vision professionnelle</h4>
+                                            <p>Comprendre l'utilisation de Jakarta EE en entreprise</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="learning-outcomes">
+                                <h4><i class="fas fa-graduation-cap"></i> À la fin de ce cours, vous serez capable de :</h4>
+                                <ul>
+                                    <li>Comprendre l'écosystème Jakarta EE et son évolution</li>
+                                    <li>Concevoir des architectures multi-couches robustes</li>
+                                    <li>Développer des APIs REST avec JAX-RS</li>
+                                    <li>Gérer la persistance avec JPA</li>
+                                    <li>Déployer des applications sur des serveurs d'applications</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- History Section -->
+                        <section id="history" class="section">
+                            <div class="section-header">
+                                <h2>Historique et évolution</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="context-section">
+                                <h3><i class="fas fa-star"></i> Pourquoi Java EE est devenu Jakarta EE ?</h3>
+                                <div class="context-grid">
+                                    <div class="context-item">
+                                        <h4><i class="fas fa-building"></i> Contexte</h4>
+                                        <p>En 2017, Oracle a transféré Java EE à la <strong>Eclipse Foundation</strong> pour accélérer l'innovation et permettre une gouvernance plus ouverte.</p>
+                                    </div>
+                                    <div class="context-item">
+                                        <h4><i class="fas fa-file-signature"></i> Problème de nom</h4>
+                                        <p>Oracle a conservé les droits sur le nom "Java", obligeant Eclipse Foundation à adopter le nom <strong>"Jakarta EE"</strong> (du nom de la capitale indonésienne).</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-section">
+                                <h3><i class="fas fa-clock"></i> Chronologie de l'évolution</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">2006</div>
+                                        <div class="timeline-content">
+                                            <h4>Java EE 5</h4>
+                                            <ul>
+                                                <li>Introduction des annotations</li>
+                                                <li>EJB 3.0 simplifié</li>
+                                                <li>JPA introduit</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">2009</div>
+                                        <div class="timeline-content">
+                                            <h4>Java EE 6</h4>
+                                            <ul>
+                                                <li>CDI (Contexts and Dependency Injection)</li>
+                                                <li>JAX-RS pour REST</li>
+                                                <li>Bean Validation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">2013</div>
+                                        <div class="timeline-content">
+                                            <h4>Java EE 7</h4>
+                                            <ul>
+                                                <li>WebSocket API</li>
+                                                <li>JSON Processing</li>
+                                                <li>Batch Applications</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">2017</div>
+                                        <div class="timeline-content">
+                                            <h4>Java EE 8</h4>
+                                            <ul>
+                                                <li>JSON-Binding</li>
+                                                <li>HTTP/2 support</li>
+                                                <li>Security API</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item highlight">
+                                        <div class="timeline-year">2019</div>
+                                        <div class="timeline-content">
+                                            <h4>Jakarta EE 8</h4>
+                                            <ul>
+                                                <li>Transfert vers Eclipse Foundation</li>
+                                                <li>Changement de namespace</li>
+                                                <li>Nouvelle gouvernance</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">2020</div>
+                                        <div class="timeline-content">
+                                            <h4>Jakarta EE 9</h4>
+                                            <ul>
+                                                <li>Migration namespace javax → jakarta</li>
+                                                <li>Java 8+ requis</li>
+                                                <li>Modernisation APIs</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item current">
+                                        <div class="timeline-year">2022</div>
+                                        <div class="timeline-content">
+                                            <h4>Jakarta EE 10 <span class="current-badge">Actuelle</span></h4>
+                                            <ul>
+                                                <li>Java 21 support</li>
+                                                <li>Nouvelles fonctionnalités</li>
+                                                <li>Performance améliorée</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="key-points">
+                                <h4><i class="fas fa-clipboard-list"></i> Points clés à retenir</h4>
+                                <div class="points-grid">
+                                    <div>
+                                        <h5>Évolution technique</h5>
+                                        <ul>
+                                            <li>Simplification progressive des APIs</li>
+                                            <li>Adoption des standards modernes</li>
+                                            <li>Amélioration des performances</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5>Changement organisationnel</h5>
+                                        <ul>
+                                            <li>Gouvernance ouverte avec Eclipse</li>
+                                            <li>Développement communautaire</li>
+                                            <li>Innovation accélérée</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Prerequisites Section -->
+                        <section id="prerequisites" class="section">
+                            <div class="section-header">
+                                <h2>Prérequis du cours</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="intro-alert">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <h3>Avant de commencer ce cours</h3>
+                                    <p>Ce cours s'adresse à des étudiants de niveau L3 ayant déjà une base solide en programmation Java. Voici les connaissances requises pour suivre efficacement ce cours.</p>
+                                </div>
+                            </div>
+
+                            <div class="prerequisites-grid">
+                                <div class="prerequisite-card essential">
+                                    <div class="card-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Programmation Java</h3>
+                                        <span class="level-badge essential">Essentiel</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Syntaxe Java de base (variables, boucles, conditions)</li>
+                                            <li><i class="fas fa-check"></i> Programmation orientée objet (classes, héritage, polymorphisme)</li>
+                                            <li><i class="fas fa-check"></i> Gestion des exceptions</li>
+                                            <li><i class="fas fa-check"></i> Collections Java (List, Map, Set)</li>
+                                            <li><i class="fas fa-check"></i> Interfaces et classes abstraites</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="prerequisite-card important">
+                                    <div class="card-header">
+                                        <i class="fas fa-book"></i>
+                                        <h3>Concepts fondamentaux</h3>
+                                        <span class="level-badge important">Important</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Architecture client-serveur</li>
+                                            <li><i class="fas fa-check"></i> Protocole HTTP (GET, POST, PUT, DELETE)</li>
+                                            <li><i class="fas fa-check"></i> Format JSON et XML</li>
+                                            <li><i class="fas fa-check"></i> Bases de données relationnelles</li>
+                                            <li><i class="fas fa-check"></i> Notion de threading</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="prerequisite-card recommended">
+                                    <div class="card-header">
+                                        <i class="fas fa-tools"></i>
+                                        <h3>Outils et environnement</h3>
+                                        <span class="level-badge recommended">Recommandé</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> IDE Java (IntelliJ IDEA, Eclipse, VS Code)</li>
+                                            <li><i class="fas fa-check"></i> Maven ou Gradle (bases)</li>
+                                            <li><i class="fas fa-check"></i> Git pour le versioning</li>
+                                            <li><i class="fas fa-check"></i> Notions de serveurs d'applications</li>
+                                            <li><i class="fas fa-check"></i> SQL de base</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="self-assessment">
+                                <h3><i class="fas fa-clipboard-check"></i> Auto-évaluation rapide</h3>
+                                <p>Avant de poursuivre, assurez-vous de pouvoir répondre positivement à ces questions :</p>
+                                <div class="assessment-grid">
+                                    <div class="assessment-item">
+                                        <input type="checkbox" id="q1">
+                                        <label for="q1">Savez-vous créer une classe Java avec constructeurs et méthodes ?</label>
+                                    </div>
+                                    <div class="assessment-item">
+                                        <input type="checkbox" id="q2">
+                                        <label for="q2">Comprenez-vous le concept d'héritage et de polymorphisme ?</label>
+                                    </div>
+                                    <div class="assessment-item">
+                                        <input type="checkbox" id="q3">
+                                        <label for="q3">Pouvez-vous utiliser les collections Java (ArrayList, HashMap) ?</label>
+                                    </div>
+                                    <div class="assessment-item">
+                                        <input type="checkbox" id="q4">
+                                        <label for="q4">Connaissez-vous la différence entre GET et POST en HTTP ?</label>
+                                    </div>
+                                    <div class="assessment-item">
+                                        <input type="checkbox" id="q5">
+                                        <label for="q5">Avez-vous déjà travaillé avec une base de données ?</label>
+                                    </div>
+                                    <div class="assessment-item">
+                                        <input type="checkbox" id="q6">
+                                        <label for="q6">Savez-vous ce qu'est une API REST de base ?</label>
+                                    </div>
+                                </div>
+                                <div class="assessment-tip">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p><strong>Conseil :</strong> Si vous ne maîtrisez pas certains concepts, n'hésitez pas à réviser avant de continuer. Cela vous permettra de mieux comprendre les concepts avancés de Jakarta EE.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Architecture Section -->
+                        <section id="architecture" class="section">
+                            <div class="section-header">
+                                <h2>Architecture de Jakarta EE</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="architecture-intro">
+                                <h3><i class="fas fa-building"></i> Architecture Multi-couches</h3>
+                                <p>Jakarta EE suit une architecture multi-couches (multi-tier) qui sépare clairement les responsabilités et facilite la maintenance et l'évolutivité des applications.</p>
+                            </div>
+
+                            <div class="architecture-diagram">
+                                <h3><i class="fas fa-sitemap"></i> Les couches de l'architecture</h3>
+                                <div class="layers-container">
+                                    <div class="layer client-layer" data-layer="client">
+                                        <div class="layer-header">
+                                            <i class="fas fa-desktop"></i>
+                                            <h4>Couche Client</h4>
+                                        </div>
+                                        <p>Interface utilisateur et présentation</p>
+                                        <div class="layer-details">
+                                            <div class="layer-components">
+                                                <h5>Composants principaux</h5>
+                                                <ul>
+                                                    <li>Navigateurs web</li>
+                                                    <li>Applications mobiles</li>
+                                                    <li>Clients riches</li>
+                                                    <li>SPA (React, Angular)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="layer-technologies">
+                                                <h5>Technologies</h5>
+                                                <div class="tech-tags">
+                                                    <span>HTML/CSS/JavaScript</span>
+                                                    <span>React/Angular/Vue</span>
+                                                    <span>Applications natives</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="layer-arrow">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+
+                                    <div class="layer web-layer" data-layer="web">
+                                        <div class="layer-header">
+                                            <i class="fas fa-globe"></i>
+                                            <h4>Couche Web</h4>
+                                        </div>
+                                        <p>Gestion des requêtes HTTP et présentation</p>
+                                        <div class="layer-details">
+                                            <div class="layer-components">
+                                                <h5>Composants principaux</h5>
+                                                <ul>
+                                                    <li>Servlets</li>
+                                                    <li>JSP/JSF</li>
+                                                    <li>Filtres</li>
+                                                    <li>Contrôleurs REST</li>
+                                                </ul>
+                                            </div>
+                                            <div class="layer-technologies">
+                                                <h5>Technologies</h5>
+                                                <div class="tech-tags">
+                                                    <span>JAX-RS</span>
+                                                    <span>Servlets API</span>
+                                                    <span>JSF</span>
+                                                    <span>WebSocket</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="layer-arrow">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+
+                                    <div class="layer business-layer" data-layer="business">
+                                        <div class="layer-header">
+                                            <i class="fas fa-cogs"></i>
+                                            <h4>Couche Métier</h4>
+                                        </div>
+                                        <p>Logique applicative et règles métier</p>
+                                        <div class="layer-details">
+                                            <div class="layer-components">
+                                                <h5>Composants principaux</h5>
+                                                <ul>
+                                                    <li>EJB</li>
+                                                    <li>CDI Beans</li>
+                                                    <li>Services métier</li>
+                                                    <li>Validation</li>
+                                                </ul>
+                                            </div>
+                                            <div class="layer-technologies">
+                                                <h5>Technologies</h5>
+                                                <div class="tech-tags">
+                                                    <span>EJB 3.x</span>
+                                                    <span>CDI</span>
+                                                    <span>Bean Validation</span>
+                                                    <span>JTA</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="layer-arrow">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+
+                                    <div class="layer persistence-layer" data-layer="persistence">
+                                        <div class="layer-header">
+                                            <i class="fas fa-database"></i>
+                                            <h4>Couche Persistance</h4>
+                                        </div>
+                                        <p>Accès aux données et persistance</p>
+                                        <div class="layer-details">
+                                            <div class="layer-components">
+                                                <h5>Composants principaux</h5>
+                                                <ul>
+                                                    <li>JPA Entities</li>
+                                                    <li>DAO/Repository</li>
+                                                    <li>DataSources</li>
+                                                    <li>Transactions</li>
+                                                </ul>
+                                            </div>
+                                            <div class="layer-technologies">
+                                                <h5>Technologies</h5>
+                                                <div class="tech-tags">
+                                                    <span>JPA/Hibernate</span>
+                                                    <span>JDBC</span>
+                                                    <span>JTA</span>
+                                                    <span>Bean Validation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="core-components">
+                                <h3><i class="fas fa-puzzle-piece"></i> Composants principaux de Jakarta EE</h3>
+                                <div class="components-grid">
+                                    <div class="component-card">
+                                        <div class="component-number">1</div>
+                                        <div class="component-content">
+                                            <h4>CDI (Contexts and Dependency Injection)</h4>
+                                            <p>Gestion des dépendances et du cycle de vie des beans</p>
+                                            <div class="component-usage">
+                                                <strong>Usage typique :</strong> Injection automatique, gestion des contextes, événements
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="component-card">
+                                        <div class="component-number">2</div>
+                                        <div class="component-content">
+                                            <h4>JAX-RS (Java API for RESTful Web Services)</h4>
+                                            <p>Création d'APIs REST standardisées</p>
+                                            <div class="component-usage">
+                                                <strong>Usage typique :</strong> Endpoints REST, sérialisation JSON, négociation de contenu
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="component-card">
+                                        <div class="component-number">3</div>
+                                        <div class="component-content">
+                                            <h4>JPA (Java Persistence API)</h4>
+                                            <p>Mapping objet-relationnel et persistance</p>
+                                            <div class="component-usage">
+                                                <strong>Usage typique :</strong> ORM, requêtes JPQL, gestion des entités
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="component-card">
+                                        <div class="component-number">4</div>
+                                        <div class="component-content">
+                                            <h4>EJB (Enterprise JavaBeans)</h4>
+                                            <p>Composants métier avec services transactionnels</p>
+                                            <div class="component-usage">
+                                                <strong>Usage typique :</strong> Session beans, gestion des transactions, sécurité
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="component-card">
+                                        <div class="component-number">5</div>
+                                        <div class="component-content">
+                                            <h4>Bean Validation</h4>
+                                            <p>Validation déclarative des données</p>
+                                            <div class="component-usage">
+                                                <strong>Usage typique :</strong> Annotations de validation, contraintes personnalisées
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="component-card">
+                                        <div class="component-number">6</div>
+                                        <div class="component-content">
+                                            <h4>Jakarta Security</h4>
+                                            <p>Authentification et autorisation</p>
+                                            <div class="component-usage">
+                                                <strong>Usage typique :</strong> Sécurité des APIs, contrôle d'accès, authentification
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="architecture-benefits">
+                                <h4><i class="fas fa-check-circle"></i> Avantages de cette architecture</h4>
+                                <div class="benefits-grid">
+                                    <div class="benefit-item">
+                                        <h5>Séparation des responsabilités</h5>
+                                        <p>Chaque couche a un rôle bien défini, facilitant la maintenance et les tests.</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <h5>Scalabilité</h5>
+                                        <p>Possibilité de faire évoluer chaque couche indépendamment selon les besoins.</p>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <h5>Réutilisabilité</h5>
+                                        <p>Les composants métier peuvent être réutilisés par différentes interfaces.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Features Section -->
+                        <section id="features" class="section">
+                            <div class="section-header">
+                                <h2>Fonctionnalités clés</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="features-nav">
+                                <button class="feature-tab active" data-feature="cdi">
+                                    <i class="fas fa-plug"></i>
+                                    <span>CDI</span>
+                                </button>
+                                <button class="feature-tab" data-feature="jaxrs">
+                                    <i class="fas fa-code"></i>
+                                    <span>JAX-RS</span>
+                                </button>
+                                <button class="feature-tab" data-feature="jpa">
+                                    <i class="fas fa-database"></i>
+                                    <span>JPA</span>
+                                </button>
+                                <button class="feature-tab" data-feature="security">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Security</span>
+                                </button>
+                                <button class="feature-tab" data-feature="transactions">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <span>Transactions</span>
+                                </button>
+                            </div>
+
+                            <div class="feature-content">
+                                <!-- CDI Feature -->
+                                <div id="feature-cdi" class="feature-panel active">
+                                    <div class="feature-header">
+                                        <i class="fas fa-plug"></i>
+                                        <div>
+                                            <h3>CDI - Injection de dépendances</h3>
+                                            <p>Contexts and Dependency Injection permet de gérer automatiquement les dépendances entre objets et leurs cycles de vie.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-details">
+                                        <div class="feature-benefits">
+                                            <h4><i class="fas fa-star"></i> Avantages principaux</h4>
+                                            <ul>
+                                                <li>Couplage faible entre composants</li>
+                                                <li>Gestion automatique du cycle de vie</li>
+                                                <li>Support des événements applicatifs</li>
+                                                <li>Intercepteurs et décorateurs</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="feature-code">
+                                            <h4><i class="fas fa-code"></i> Exemple de code</h4>
+                                            <pre><code>@ApplicationScoped
+public class UserService {
+    
+    @Inject
+    private UserRepository userRepository;
+    
+    @Inject
+    private Logger logger;
+    
+    public User createUser(User user) {
+        logger.info("Creating user: " + user.getEmail());
+        return userRepository.save(user);
+    }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- JAX-RS Feature -->
+                                <div id="feature-jaxrs" class="feature-panel">
+                                    <div class="feature-header">
+                                        <i class="fas fa-code"></i>
+                                        <div>
+                                            <h3>JAX-RS - APIs RESTful</h3>
+                                            <p>Java API for RESTful Web Services facilite la création d'APIs REST avec des annotations simples.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-details">
+                                        <div class="feature-benefits">
+                                            <h4><i class="fas fa-star"></i> Avantages principaux</h4>
+                                            <ul>
+                                                <li>Annotations intuitives (@GET, @POST, etc.)</li>
+                                                <li>Sérialisation JSON automatique</li>
+                                                <li>Gestion des codes de statut HTTP</li>
+                                                <li>Support des filtres et intercepteurs</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="feature-code">
+                                            <h4><i class="fas fa-code"></i> Exemple de code</h4>
+                                            <pre><code>@Path("/users")
+@ApplicationScoped
+public class UserResource {
+    
+    @Inject
+    private UserService userService;
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List&lt;User&gt; getAllUsers() {
+        return userService.findAll();
+    }
+    
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response createUser(User user) {
+        User created = userService.create(user);
+        return Response.status(201).entity(created).build();
+    }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- JPA Feature -->
+                                <div id="feature-jpa" class="feature-panel">
+                                    <div class="feature-header">
+                                        <i class="fas fa-database"></i>
+                                        <div>
+                                            <h3>JPA - Persistance des données</h3>
+                                            <p>Java Persistence API offre un mapping objet-relationnel puissant pour gérer la persistance des données.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-details">
+                                        <div class="feature-benefits">
+                                            <h4><i class="fas fa-star"></i> Avantages principaux</h4>
+                                            <ul>
+                                                <li>Mapping objet-relationnel automatique</li>
+                                                <li>Langage de requête JPQL</li>
+                                                <li>Gestion des relations complexes</li>
+                                                <li>Cache de second niveau</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="feature-code">
+                                            <h4><i class="fas fa-code"></i> Exemple de code</h4>
+                                            <pre><code>@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Column(nullable = false, unique = true)
+    private String email;
+    
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List&lt;Order&gt; orders = new ArrayList&lt;&gt;();
+    
+    // Getters et setters...
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Security Feature -->
+                                <div id="feature-security" class="feature-panel">
+                                    <div class="feature-header">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <div>
+                                            <h3>Jakarta Security</h3>
+                                            <p>Framework de sécurité intégré pour l'authentification, l'autorisation et la protection des applications.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-details">
+                                        <div class="feature-benefits">
+                                            <h4><i class="fas fa-star"></i> Avantages principaux</h4>
+                                            <ul>
+                                                <li>Authentification déclarative</li>
+                                                <li>Contrôle d'accès basé sur les rôles</li>
+                                                <li>Protection CSRF intégrée</li>
+                                                <li>Support OAuth2 et JWT</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="feature-code">
+                                            <h4><i class="fas fa-code"></i> Exemple de code</h4>
+                                            <pre><code>@Path("/secure")
+public class SecureResource {
+    
+    @GET
+    @RolesAllowed("ADMIN")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAdminData() {
+        return Response.ok("Données admin").build();
+    }
+    
+    @GET
+    @Path("/user")
+    @RolesAllowed({"USER", "ADMIN"})
+    public Response getUserData() {
+        return Response.ok("Données utilisateur").build();
+    }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Transactions Feature -->
+                                <div id="feature-transactions" class="feature-panel">
+                                    <div class="feature-header">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <div>
+                                            <h3>Gestion des transactions</h3>
+                                            <p>JTA (Java Transaction API) permet de gérer les transactions de manière déclarative ou programmatique.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-details">
+                                        <div class="feature-benefits">
+                                            <h4><i class="fas fa-star"></i> Avantages principaux</h4>
+                                            <ul>
+                                                <li>Transactions déclaratives avec @Transactional</li>
+                                                <li>Support des transactions distribuées</li>
+                                                <li>Rollback automatique en cas d'exception</li>
+                                                <li>Gestion des niveaux d'isolation</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="feature-code">
+                                            <h4><i class="fas fa-code"></i> Exemple de code</h4>
+                                            <pre><code>@ApplicationScoped
+public class OrderService {
+    
+    @Inject
+    private OrderRepository orderRepository;
+    
+    @Inject
+    private PaymentService paymentService;
+    
+    @Transactional
+    public Order processOrder(Order order) {
+        // Sauvegarde de la commande
+        Order savedOrder = orderRepository.save(order);
+        
+        // Traitement du paiement
+        paymentService.processPayment(order.getAmount());
+        
+        // Si une exception survient, tout est annulé
+        return savedOrder;
+    }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Comparison Section -->
+                        <section id="comparison" class="section">
+                            <div class="section-header">
+                                <h2>Comparaison Jakarta EE vs Spring Boot</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="comparison-intro">
+                                <i class="fas fa-balance-scale"></i>
+                                <div>
+                                    <h3>Deux approches, même objectif</h3>
+                                    <p>Jakarta EE et Spring Boot sont deux solutions populaires pour le développement d'applications Java d'entreprise. Chacune a ses avantages selon le contexte du projet.</p>
+                                </div>
+                            </div>
+
+                            <div class="comparison-table">
+                                <h3><i class="fas fa-table"></i> Comparaison détaillée</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Critère</th>
+                                            <th class="jakarta-col">Jakarta EE</th>
+                                            <th class="spring-col">Spring Boot</th>
+                                            <th>Avantage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Philosophie</strong></td>
+                                            <td>Spécifications standards, implémentations multiples</td>
+                                            <td>Framework complet avec écosystème intégré</td>
+                                            <td><i class="fas fa-equals neutral"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Configuration</strong></td>
+                                            <td>Annotations + XML minimal, Convention over Configuration</td>
+                                            <td>Annotations + Java Config, très flexible</td>
+                                            <td><i class="fas fa-check spring-win"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Injection de dépendances</strong></td>
+                                            <td>CDI natif, puissant et standardisé</td>
+                                            <td>DI Spring, mature et feature-rich</td>
+                                            <td><i class="fas fa-equals neutral"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>APIs REST</strong></td>
+                                            <td>JAX-RS standard, annotations déclaratives</td>
+                                            <td>Spring MVC + Spring WebFlux, très populaire</td>
+                                            <td><i class="fas fa-check spring-win"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Persistance</strong></td>
+                                            <td>JPA standard avec implémentations multiples</td>
+                                            <td>Spring Data + JPA, abstraction simplifiée</td>
+                                            <td><i class="fas fa-check spring-win"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sécurité</strong></td>
+                                            <td>Jakarta Security, intégré mais moins mature</td>
+                                            <td>Spring Security, très mature et complet</td>
+                                            <td><i class="fas fa-check spring-win"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Standards</strong></td>
+                                            <td>Suit les standards JCP/Jakarta EE</td>
+                                            <td>Crée ses propres standards de facto</td>
+                                            <td><i class="fas fa-check jakarta-win"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Portabilité</strong></td>
+                                            <td>Très portable entre serveurs conformes</td>
+                                            <td>Dépendant de l'écosystème Spring</td>
+                                            <td><i class="fas fa-check jakarta-win"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="advantages-section">
+                                <h3><i class="fas fa-thumbs-up"></i> Points forts de chaque solution</h3>
+                                <div class="advantages-grid">
+                                    <div class="advantage-card jakarta">
+                                        <h4>Jakarta EE</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Standards ouverts et portables</li>
+                                            <li><i class="fas fa-check"></i> Forte adoption en entreprise</li>
+                                            <li><i class="fas fa-check"></i> Serveurs d'applications robustes</li>
+                                            <li><i class="fas fa-check"></i> Écosystème mature et stable</li>
+                                            <li><i class="fas fa-check"></i> Indépendance vis-à-vis des vendors</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="advantage-card spring">
+                                        <h4>Spring Boot</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Écosystème très riche</li>
+                                            <li><i class="fas fa-check"></i> Documentation excellente</li>
+                                            <li><i class="fas fa-check"></i> Communauté très active</li>
+                                            <li><i class="fas fa-check"></i> Développement rapide</li>
+                                            <li><i class="fas fa-check"></i> Support microservices complet</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="when-to-use">
+                                <h3><i class="fas fa-crosshairs"></i> Quand utiliser quelle solution ?</h3>
+                                <div class="use-cases-grid">
+                                    <div class="use-case-card jakarta">
+                                        <h4>Choisir Jakarta EE quand...</h4>
+                                        <ul>
+                                            <li>Applications d'entreprise complexes</li>
+                                            <li>Environnements avec serveurs d'applications</li>
+                                            <li>Besoin de portabilité entre providers</li>
+                                            <li>Projets nécessitant des standards stricts</li>
+                                            <li>Équipes familières avec Java EE</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="use-case-card spring">
+                                        <h4>Choisir Spring Boot quand...</h4>
+                                        <ul>
+                                            <li>Développement rapide d'applications</li>
+                                            <li>Projets microservices</li>
+                                            <li>Startups et équipes agiles</li>
+                                            <li>Applications cloud-native</li>
+                                            <li>Besoin d'un écosystème complet</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comparison-conclusion">
+                                <h4><i class="fas fa-lightbulb"></i> Conseil pour votre choix</h4>
+                                <p>Le choix entre Jakarta EE et Spring Boot dépend largement du contexte de votre projet, de votre équipe et de vos contraintes techniques.</p>
+                                <div class="conclusion-tip">
+                                    <p><strong>Pour débuter :</strong> Spring Boot est souvent plus accessible grâce à sa documentation et sa communauté. <strong>Pour l'entreprise :</strong> Jakarta EE offre plus de standardisation et de portabilité à long terme.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Examples Section -->
+                        <section id="examples" class="section">
+                            <div class="section-header">
+                                <h2>Exemples pratiques</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="project-intro">
+                                <h3><i class="fas fa-book"></i> Projet : Système de gestion de bibliothèque</h3>
+                                <p>Nous allons créer un système simple de gestion de bibliothèque pour illustrer les concepts de Jakarta EE en pratique.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">JPA</span>
+                                    <span class="tech-tag">CDI</span>
+                                    <span class="tech-tag">JAX-RS</span>
+                                    <span class="tech-tag">Bean Validation</span>
+                                    <span class="tech-tag">Transactions</span>
+                                </div>
+                            </div>
+
+                            <div class="examples-tabs">
+                                <button class="example-tab active" data-example="structure">
+                                    <i class="fas fa-folder-tree"></i>
+                                    <span>Structure</span>
+                                </button>
+                                <button class="example-tab" data-example="entity">
+                                    <i class="fas fa-table"></i>
+                                    <span>Entités</span>
+                                </button>
+                                <button class="example-tab" data-example="service">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>Services</span>
+                                </button>
+                                <button class="example-tab" data-example="rest">
+                                    <i class="fas fa-globe"></i>
+                                    <span>REST API</span>
+                                </button>
+                                <button class="example-tab" data-example="deployment">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Déploiement</span>
+                                </button>
+                            </div>
+
+                            <div class="example-content">
+                                <!-- Structure -->
+                                <div id="example-structure" class="example-panel active">
+                                    <h3>Structure du projet Maven</h3>
+                                    <div class="code-block">
+                                        <pre><code>library-management/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/example/library/
+│       │       ├── entity/
+│       │       │   ├── Book.java
+│       │       │   ├── Author.java
+│       │       │   └── User.java
+│       │       ├── service/
+│       │       │   ├── BookService.java
+│       │       │   └── UserService.java
+│       │       ├── resource/
+│       │       │   ├── BookResource.java
+│       │       │   └── UserResource.java
+│       │       └── config/
+│       │           └── RestApplication.java
+│       └── resources/
+│           ├── META-INF/
+│           │   └── persistence.xml
+│           └── application.properties
+├── pom.xml
+└── README.md</code></pre>
+                                    </div>
+
+                                    <div class="structure-explanation">
+                                        <div class="package-info">
+                                            <h4><i class="fas fa-box"></i> Packages principaux</h4>
+                                            <div class="package-list">
+                                                <div class="package-item">
+                                                    <span class="package-name">entity/</span>
+                                                    <span class="package-desc">Entités JPA (Book, Author, User)</span>
+                                                </div>
+                                                <div class="package-item">
+                                                    <span class="package-name">service/</span>
+                                                    <span class="package-desc">Services métier avec CDI</span>
+                                                </div>
+                                                <div class="package-item">
+                                                    <span class="package-name">resource/</span>
+                                                    <span class="package-desc">Endpoints REST JAX-RS</span>
+                                                </div>
+                                                <div class="package-item">
+                                                    <span class="package-name">config/</span>
+                                                    <span class="package-desc">Configuration de l'application</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Entity -->
+                                <div id="example-entity" class="example-panel">
+                                    <h3><i class="fas fa-table"></i> Entité JPA - Book.java</h3>
+                                    <div class="code-block">
+                                        <pre><code>@Entity
+@Table(name = "books")
+public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Column(nullable = false)
+    private String title;
+    
+    @Column(nullable = false)
+    private String isbn;
+    
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
+    
+    @Column(name = "publication_year")
+    private Integer publicationYear;
+    
+    @Enumerated(EnumType.STRING)
+    private BookStatus status = BookStatus.AVAILABLE;
+    
+    // Constructeurs
+    public Book() {}
+    
+    public Book(String title, String isbn, Author author) {
+        this.title = title;
+        this.isbn = isbn;
+        this.author = author;
+    }
+    
+    // Getters et setters...
+}
+
+enum BookStatus {
+    AVAILABLE, BORROWED, RESERVED
+}</code></pre>
+                                    </div>
+                                </div>
+
+                                <!-- Service -->
+                                <div id="example-service" class="example-panel">
+                                    <h3><i class="fas fa-cogs"></i> Service métier - BookService.java</h3>
+                                    <div class="code-block">
+                                        <pre><code>@ApplicationScoped
+public class BookService {
+    
+    @PersistenceContext
+    private EntityManager em;
+    
+    @Inject
+    private Logger logger;
+    
+    @Transactional
+    public Book createBook(Book book) {
+        logger.info("Creating book: " + book.getTitle());
+        
+        // Validation métier
+        if (bookExists(book.getIsbn())) {
+            throw new IllegalArgumentException("Book with ISBN already exists");
+        }
+        
+        em.persist(book);
+        return book;
+    }
+    
+    public List&lt;Book&gt; findAll() {
+        return em.createQuery("SELECT b FROM Book b", Book.class)
+                 .getResultList();
+    }
+    
+    public List&lt;Book&gt; findByAuthor(String authorName) {
+        return em.createQuery(
+            "SELECT b FROM Book b WHERE b.author.name LIKE :name", Book.class)
+                 .setParameter("name", "%" + authorName + "%")
+                 .getResultList();
+    }
+    
+    @Transactional
+    public Book borrowBook(Long bookId, Long userId) {
+        Book book = em.find(Book.class, bookId);
+        
+        if (book == null) {
+            throw new EntityNotFoundException("Book not found");
+        }
+        
+        if (book.getStatus() != BookStatus.AVAILABLE) {
+            throw new IllegalStateException("Book not available");
+        }
+        
+        book.setStatus(BookStatus.BORROWED);
+        return book;
+    }
+    
+    private boolean bookExists(String isbn) {
+        Long count = em.createQuery(
+            "SELECT COUNT(b) FROM Book b WHERE b.isbn = :isbn", Long.class)
+                       .setParameter("isbn", isbn)
+                       .getSingleResult();
+        return count > 0;
+    }
+}</code></pre>
+                                    </div>
+                                </div>
+
+                                <!-- REST API -->
+                                <div id="example-rest" class="example-panel">
+                                    <h3><i class="fas fa-globe"></i> API REST - BookResource.java</h3>
+                                    <div class="code-block">
+                                        <pre><code>@Path("/books")
+@ApplicationScoped
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
+public class BookResource {
+    
+    @Inject
+    private BookService bookService;
+    
+    @GET
+    public Response getAllBooks() {
+        List&lt;Book&gt; books = bookService.findAll();
+        return Response.ok(books).build();
+    }
+    
+    @GET
+    @Path("/{id}")
+    public Response getBook(@PathParam("id") Long id) {
+        try {
+            Book book = bookService.findById(id);
+            return Response.ok(book).build();
+        } catch (EntityNotFoundException e) {
+            return Response.status(404)
+                          .entity("Book not found")
+                          .build();
+        }
+    }
+    
+    @POST
+    public Response createBook(@Valid Book book) {
+        try {
+            Book created = bookService.createBook(book);
+            return Response.status(201)
+                          .entity(created)
+                          .build();
+        } catch (IllegalArgumentException e) {
+            return Response.status(400)
+                          .entity(e.getMessage())
+                          .build();
+        }
+    }
+    
+    @PUT
+    @Path("/{id}/borrow")
+    public Response borrowBook(@PathParam("id") Long bookId, 
+                              @QueryParam("userId") Long userId) {
+        try {
+            Book book = bookService.borrowBook(bookId, userId);
+            return Response.ok(book).build();
+        } catch (IllegalStateException e) {
+            return Response.status(409)
+                          .entity(e.getMessage())
+                          .build();
+        }
+    }
+    
+    @GET
+    @Path("/search")
+    public Response searchByAuthor(@QueryParam("author") String author) {
+        List&lt;Book&gt; books = bookService.findByAuthor(author);
+        return Response.ok(books).build();
+    }
+}</code></pre>
+                                    </div>
+                                </div>
+
+                                <!-- Deployment -->
+                                <div id="example-deployment" class="example-panel">
+                                    <h3><i class="fas fa-rocket"></i> Déploiement sur Payara Server</h3>
+                                    
+                                    <div class="deployment-steps">
+                                        <div class="step">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <h4>Préparation du projet</h4>
+                                                <p>Compiler et packager l'application</p>
+                                                <div class="command">
+                                                    <code>mvn clean package</code>
+                                                </div>
+                                                <p class="step-detail">Génère un fichier WAR dans le dossier target/</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="step">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <h4>Démarrage du serveur</h4>
+                                                <p>Lancer Payara Server</p>
+                                                <div class="command">
+                                                    <code>./payara/bin/asadmin start-domain</code>
+                                                </div>
+                                                <p class="step-detail">Le serveur démarre sur http://localhost:8080</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="step">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <h4>Déploiement de l'application</h4>
+                                                <p>Déployer le WAR sur le serveur</p>
+                                                <div class="command">
+                                                    <code>./payara/bin/asadmin deploy target/library-management.war</code>
+                                                </div>
+                                                <p class="step-detail">L'application est accessible via l'admin console</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="step">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <h4>Test des APIs</h4>
+                                                <p>Tester les endpoints REST</p>
+                                                <div class="command">
+                                                    <code>curl http://localhost:8080/library-management/api/books</code>
+                                                </div>
+                                                <p class="step-detail">Vérifier que les APIs répondent correctement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="prerequisites-box">
+                                        <h4><i class="fas fa-exclamation-triangle"></i> Prérequis</h4>
+                                        <ul>
+                                            <li>Java 11+ installé</li>
+                                            <li>Maven 3.6+ configuré</li>
+                                            <li>Payara Server téléchargé et configuré</li>
+                                            <li>Base de données H2 (embarquée) ou PostgreSQL</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="api-testing">
+                                <h3><i class="fas fa-plug"></i> Test des APIs REST</h3>
+                                <div class="api-examples">
+                                    <div class="api-example">
+                                        <h4>GET /api/books</h4>
+                                        <p>Récupérer tous les livres</p>
+                                        <div class="command">
+                                            <code>curl -X GET http://localhost:8080/library-management/api/books</code>
+                                        </div>
+                                    </div>
+                                    <div class="api-example">
+                                        <h4>POST /api/books</h4>
+                                        <p>Créer un nouveau livre</p>
+                                        <div class="command">
+                                            <code>curl -X POST -H "Content-Type: application/json" -d '{"title":"Java Guide","isbn":"123"}' http://localhost:8080/library-management/api/books</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Conclusion Section -->
+                        <section id="conclusion" class="section">
+                            <div class="section-header">
+                                <h2>Conclusion</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="key-takeaways">
+                                <h3><i class="fas fa-trophy"></i> Points clés à retenir</h3>
+                                <div class="takeaways-grid">
+                                    <div class="takeaway-card">
+                                        <div class="takeaway-icon">
+                                            <i class="fas fa-bullseye"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Standards et portabilité</h4>
+                                            <p>Jakarta EE offre des standards ouverts garantissant la portabilité entre différents serveurs d'applications.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="takeaway-card">
+                                        <div class="takeaway-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Écosystème mature</h4>
+                                            <p>Une plateforme stable et mature, largement adoptée dans les environnements d'entreprise.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="takeaway-card">
+                                        <div class="takeaway-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Évolution continue</h4>
+                                            <p>Jakarta EE continue d'évoluer avec des versions régulières intégrant les dernières innovations.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="takeaway-card">
+                                        <div class="takeaway-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Opportunités professionnelles</h4>
+                                            <p>De nombreuses opportunités dans les entreprises cherchant des développeurs Jakarta EE expérimentés.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="enterprise-importance">
+                                <h3><i class="fas fa-building"></i> Importance de Jakarta EE en entreprise</h3>
+                                <div class="enterprise-grid">
+                                    <div class="enterprise-item">
+                                        <h4>Secteurs d'adoption</h4>
+                                        <ul>
+                                            <li>Banque et finance</li>
+                                            <li>Télécommunications</li>
+                                            <li>Secteur public</li>
+                                            <li>Grandes entreprises</li>
+                                            <li>Systèmes critiques</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="enterprise-item">
+                                        <h4>Avantages entreprise</h4>
+                                        <ul>
+                                            <li>Stabilité et fiabilité</li>
+                                            <li>Support commercial</li>
+                                            <li>Conformité standards</li>
+                                            <li>Écosystème mature</li>
+                                            <li>Sécurité renforcée</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="enterprise-item">
+                                        <h4>Cas d'usage typiques</h4>
+                                        <ul>
+                                            <li>Applications monolithiques</li>
+                                            <li>Systèmes transactionnels</li>
+                                            <li>APIs d'entreprise</li>
+                                            <li>Intégration de systèmes</li>
+                                            <li>Applications critiques</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="career-paths">
+                                <h3><i class="fas fa-road"></i> Perspectives professionnelles</h3>
+                                <div class="careers-grid">
+                                    <div class="career-card">
+                                        <h4>Développeur Java Enterprise</h4>
+                                        <p>Développement d'applications d'entreprise avec Jakarta EE</p>
+                                        <div class="career-skills">
+                                            <span>Jakarta EE</span>
+                                            <span>Microservices</span>
+                                            <span>Architecture</span>
+                                            <span>Bases de données</span>
+                                        </div>
+                                        <div class="salary">45-70k€</div>
+                                    </div>
+
+                                    <div class="career-card">
+                                        <h4>Architecte Solutions</h4>
+                                        <p>Conception d'architectures complexes et évolutives</p>
+                                        <div class="career-skills">
+                                            <span>Architecture</span>
+                                            <span>Design patterns</span>
+                                            <span>Performance</span>
+                                            <span>Sécurité</span>
+                                        </div>
+                                        <div class="salary">60-90k€</div>
+                                    </div>
+
+                                    <div class="career-card">
+                                        <h4>Consultant Technique</h4>
+                                        <p>Conseil et expertise Jakarta EE en mission</p>
+                                        <div class="career-skills">
+                                            <span>Expertise technique</span>
+                                            <span>Communication</span>
+                                            <span>Formation</span>
+                                            <span>Audit</span>
+                                        </div>
+                                        <div class="salary">55-85k€</div>
+                                    </div>
+
+                                    <div class="career-card">
+                                        <h4>Lead Developer</h4>
+                                        <p>Encadrement technique d'équipes de développement</p>
+                                        <div class="career-skills">
+                                            <span>Leadership</span>
+                                            <span>Mentoring</span>
+                                            <span>Code review</span>
+                                            <span>Méthodologies agiles</span>
+                                        </div>
+                                        <div class="salary">50-80k€</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="next-steps">
+                                <h3><i class="fas fa-map-signs"></i> Prochaines étapes recommandées</h3>
+                                <div class="steps-grid">
+                                    <div class="steps-column">
+                                        <h4>Pour approfondir vos connaissances :</h4>
+                                        <div class="step-list">
+                                            <div class="step-item">
+                                                <span class="step-num">1</span>
+                                                <span>Approfondir JPA avec des relations complexes</span>
+                                            </div>
+                                            <div class="step-item">
+                                                <span class="step-num">2</span>
+                                                <span>Explorer les microservices avec MicroProfile</span>
+                                            </div>
+                                            <div class="step-item">
+                                                <span class="step-num">3</span>
+                                                <span>Maîtriser la sécurité avec Jakarta Security</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="steps-column">
+                                        <h4>Pour votre développement professionnel :</h4>
+                                        <div class="step-list">
+                                            <div class="step-item">
+                                                <span class="step-num">4</span>
+                                                <span>Apprendre les patterns d'architecture enterprise</span>
+                                            </div>
+                                            <div class="step-item">
+                                                <span class="step-num">5</span>
+                                                <span>Pratiquer avec des projets réels</span>
+                                            </div>
+                                            <div class="step-item">
+                                                <span class="step-num">6</span>
+                                                <span>Participer à la communauté Jakarta EE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="final-message">
+                                <div class="congratulations">
+                                    <i class="fas fa-trophy"></i>
+                                    <h3>Félicitations ! 🎉</h3>
+                                    <p>Vous avez terminé ce cours d'introduction à Jakarta EE. Vous possédez maintenant les connaissances fondamentales pour développer des applications d'entreprise robustes.</p>
+                                    <p>La maîtrise de Jakarta EE vous ouvre de nombreuses opportunités dans le développement d'applications d'entreprise. Continuez à pratiquer et à explorer cet écosystème riche !</p>
+                                    
+                                    <div class="next-suggestion">
+                                        <p><strong>Prochaine étape suggérée :</strong> Créez votre propre projet Jakarta EE en suivant les exemples de ce cours et explorez les fonctionnalités avancées.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Annexes Section -->
+                        <section id="annexes" class="section">
+                            <div class="section-header">
+                                <h2>Annexes et ressources</h2>
+                                <div class="section-divider"></div>
+                            </div>
+
+                            <div class="official-links">
+                                <h3><i class="fas fa-globe"></i> Liens officiels</h3>
+                                <div class="links-grid">
+                                    <a href="https://jakarta.ee/" target="_blank" class="link-card">
+                                        <h4>Site officiel Jakarta EE</h4>
+                                        <p>Site principal avec toutes les informations sur Jakarta EE</p>
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://jakarta.ee/specifications/" target="_blank" class="link-card">
+                                        <h4>Spécifications Jakarta EE</h4>
+                                        <p>Toutes les spécifications officielles avec documentation détaillée</p>
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://www.eclipse.org/org/" target="_blank" class="link-card">
+                                        <h4>Eclipse Foundation</h4>
+                                        <p>Organisation gérant Jakarta EE</p>
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://eclipse-ee4j.github.io/jakartaee-tutorial/" target="_blank" class="link-card">
+                                        <h4>Jakarta EE Tutorial</h4>
+                                        <p>Tutorial officiel complet Jakarta EE</p>
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="servers-section">
+                                <h3><i class="fas fa-server"></i> Serveurs d'applications Jakarta EE</h3>
+                                <div class="servers-grid">
+                                    <div class="server-card">
+                                        <div class="server-header">
+                                            <h4>Payara Server</h4>
+                                            <span class="license">Open Source / Commercial</span>
+                                        </div>
+                                        <p>Serveur d'applications basé sur GlassFish</p>
+                                        <div class="server-features">
+                                            <span>Production ready</span>
+                                            <span>Support microservices</span>
+                                            <span>Cloud native</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="server-card">
+                                        <div class="server-header">
+                                            <h4>WildFly</h4>
+                                            <span class="license">Open Source</span>
+                                        </div>
+                                        <p>Serveur JBoss Community par Red Hat</p>
+                                        <div class="server-features">
+                                            <span>Léger et rapide</span>
+                                            <span>Clustering</span>
+                                            <span>Administration Web</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="server-card">
+                                        <div class="server-header">
+                                            <h4>Open Liberty</h4>
+                                            <span class="license">Open Source</span>
+                                        </div>
+                                        <p>Runtime IBM léger et modulaire</p>
+                                        <div class="server-features">
+                                            <span>Microservices</span>
+                                            <span>Cloud native</span>
+                                            <span>Developer tools</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="server-card">
+                                        <div class="server-header">
+                                            <h4>TomEE</h4>
+                                            <span class="license">Open Source</span>
+                                        </div>
+                                        <p>Tomcat + Jakarta EE par Apache</p>
+                                        <div class="server-features">
+                                            <span>Familier aux développeurs Tomcat</span>
+                                            <span>Léger</span>
+                                            <span>Embeddable</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="learning-resources">
+                                <h3><i class="fas fa-graduation-cap"></i> Ressources d'apprentissage</h3>
+                                <div class="resources-grid">
+                                    <div class="resource-category">
+                                        <div class="category-header">
+                                            <i class="fas fa-book"></i>
+                                            <h4>Livres recommandés</h4>
+                                        </div>
+                                        <div class="resource-list">
+                                            <div class="resource-item">
+                                                <h5>Jakarta EE Cookbook</h5>
+                                                <p class="author">Elder Moraes</p>
+                                                <p>Recettes pratiques pour Jakarta EE</p>
+                                            </div>
+                                            <div class="resource-item">
+                                                <h5>Modern Java EE Design Patterns</h5>
+                                                <p class="author">Markus Eisele</p>
+                                                <p>Patterns et architectures modernes</p>
+                                            </div>
+                                            <div class="resource-item">
+                                                <h5>Java EE 8 Application Development</h5>
+                                                <p class="author">David R. Heffelfinger</p>
+                                                <p>Développement d'applications complètes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="resource-category">
+                                        <div class="category-header">
+                                            <i class="fas fa-users"></i>
+                                            <h4>Communautés</h4>
+                                        </div>
+                                        <div class="resource-list">
+                                            <div class="resource-item">
+                                                <h5>Jakarta EE Community</h5>
+                                                <p class="author">Communauté officielle</p>
+                                                <p>Forums, discussions et contributions</p>
+                                            </div>
+                                            <div class="resource-item">
+                                                <h5>Stack Overflow</h5>
+                                                <p class="author">Communauté développeurs</p>
+                                                <p>Questions/réponses techniques</p>
+                                            </div>
+                                            <div class="resource-item">
+                                                <h5>Reddit r/java</h5>
+                                                <p class="author">Communauté Reddit</p>
+                                                <p>Discussions et actualités Java/Jakarta EE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="resource-category">
+                                        <div class="category-header">
+                                            <i class="fas fa-play-circle"></i>
+                                            <h4>Formations en ligne</h4>
+                                        </div>
+                                        <div class="resource-list">
+                                            <div class="resource-item">
+                                                <h5>Oracle Java Learning</h5>
+                                                <p class="author">Oracle</p>
+                                                <p>Formations officielles Java et Jakarta EE</p>
+                                            </div>
+                                            <div class="resource-item">
+                                                <h5>Pluralsight</h5>
+                                                <p class="author">Plateforme d'apprentissage</p>
+                                                <p>Cours vidéo Jakarta EE et Java</p>
+                                            </div>
+                                            <div class="resource-item">
+                                                <h5>LinkedIn Learning</h5>
+                                                <p class="author">LinkedIn</p>
+                                                <p>Formations professionnelles Jakarta EE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dev-tools">
+                                <h3><i class="fas fa-tools"></i> Outils de développement recommandés</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-card">
+                                        <div class="tool-header">
+                                            <h4>IntelliJ IDEA</h4>
+                                            <span class="tool-type">IDE</span>
+                                        </div>
+                                        <p>Support excellent Jakarta EE avec templates et outils intégrés</p>
+                                        <p class="license">Licence : Community / Ultimate</p>
+                                    </div>
+
+                                    <div class="tool-card">
+                                        <div class="tool-header">
+                                            <h4>Eclipse IDE</h4>
+                                            <span class="tool-type">IDE</span>
+                                        </div>
+                                        <p>IDE de référence avec plugins Jakarta EE</p>
+                                        <p class="license">Licence : Open Source</p>
+                                    </div>
+
+                                    <div class="tool-card">
+                                        <div class="tool-header">
+                                            <h4>VS Code</h4>
+                                            <span class="tool-type">Éditeur</span>
+                                        </div>
+                                        <p>Extensions Java et Jakarta EE disponibles</p>
+                                        <p class="license">Licence : Open Source</p>
+                                    </div>
+
+                                    <div class="tool-card">
+                                        <div class="tool-header">
+                                            <h4>Maven</h4>
+                                            <span class="tool-type">Build Tool</span>
+                                        </div>
+                                        <p>Gestionnaire de dépendances et build standard</p>
+                                        <p class="license">Licence : Open Source</p>
+                                    </div>
+
+                                    <div class="tool-card">
+                                        <div class="tool-header">
+                                            <h4>Gradle</h4>
+                                            <span class="tool-type">Build Tool</span>
+                                        </div>
+                                        <p>Alternative moderne à Maven</p>
+                                        <p class="license">Licence : Open Source</p>
+                                    </div>
+
+                                    <div class="tool-card">
+                                        <div class="tool-header">
+                                            <h4>Docker</h4>
+                                            <span class="tool-type">Containerisation</span>
+                                        </div>
+                                        <p>Pour déployer des applications Jakarta EE</p>
+                                        <p class="license">Licence : Open Source</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bibliography">
+                                <h3><i class="fas fa-book-open"></i> Références bibliographiques</h3>
+                                <div class="bibliography-list">
+                                    <div class="reference-item">
+                                        <span class="ref-number">[1]</span>
+                                        <p>Oracle Corporation. (2023). Jakarta EE Platform Specification. Eclipse Foundation.</p>
+                                    </div>
+                                    <div class="reference-item">
+                                        <span class="ref-number">[2]</span>
+                                        <p>Eclipse Foundation. (2023). Jakarta EE Tutorial. https://eclipse-ee4j.github.io/jakartaee-tutorial/</p>
+                                    </div>
+                                    <div class="reference-item">
+                                        <span class="ref-number">[3]</span>
+                                        <p>Eisele, M. (2016). Modern Java EE Design Patterns. O'Reilly Media.</p>
+                                    </div>
+                                    <div class="reference-item">
+                                        <span class="ref-number">[4]</span>
+                                        <p>Moraes, E. (2020). Jakarta EE Cookbook. Packt Publishing.</p>
+                                    </div>
+                                    <div class="reference-item">
+                                        <span class="ref-number">[5]</span>
+                                        <p>Heffelfinger, D. R. (2017). Java EE 8 Application Development. Packt Publishing.</p>
+                                    </div>
+                                    <div class="reference-item">
+                                        <span class="ref-number">[6]</span>
+                                        <p>Red Hat Inc. (2023). WildFly Documentation. https://docs.wildfly.org/</p>
+                                    </div>
+                                    <div class="reference-item">
+                                        <span class="ref-number">[7]</span>
+                                        <p>Payara Services Ltd. (2023). Payara Server Documentation. https://docs.payara.fish/</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="final-note">
+                                <h4><i class="fas fa-sticky-note"></i> Note importante</h4>
+                                <p>Cette liste de ressources est non exhaustive et évolue constamment. La communauté Jakarta EE est active et produit régulièrement du nouveau contenu.</p>
+                                <div class="final-tip">
+                                    <p><strong>Conseil :</strong> Rejoignez les communautés en ligne pour rester à jour avec les dernières évolutions et bonnes pratiques de Jakarta EE.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
